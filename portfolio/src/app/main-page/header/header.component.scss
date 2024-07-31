@@ -1,0 +1,97 @@
+// Importowanie stylów
+@import './../../../styles.scss';
+
+// Stylowanie nagłówka (header)
+header {
+    @include dFlex; // Użycie mixina dFlex dla flexbox
+    background-color: #141d2f; // Ustawienie koloru tła
+    max-height: 32px; // Maksymalna wysokość
+    height: 100%; // Wysokość na 100%
+    padding: 40px 80px; // Padding: góra/dół 40px, lewo/prawo 80px
+    width: 100vw; // Szerokość na 100% widocznego obszaru
+    max-width: calc(100vw - 160px); // Maksymalna szerokość z uwzględnieniem paddingu
+    position: fixed; // Pozycjonowanie fixed
+    left: 0; // Przesunięcie do lewej krawędzi
+    z-index: 99; // Z-index dla nakładania się elementów
+}
+
+// Stylowanie nawigacji (nav)
+nav {
+    @include dFlex($jc: space-between); // Użycie mixina dFlex z justyfikacją contentu na space-between
+    background-color: #141d2f; // Kolor tła
+    width: 100%; // Szerokość na 100%
+    max-width: 1920px; // Maksymalna szerokość
+
+    a {
+        @include dFlex; // Użycie mixina dFlex dla flexbox
+
+        img {
+            width: 150px; // Szerokość obrazka
+
+            &:hover {
+                cursor: pointer; // Kursor jako pointer przy hover
+            }
+        }
+    }
+}
+
+// Klasa .orange zmienia kolor tekstu na niebieski (zdefiniowany jako $blue)
+.orange {
+    color: $blue !important;
+}
+
+// Stylowanie przycisku języka
+.language-btn {
+    @include dFlex($g: 4px); // Użycie mixina dFlex z gap 4px
+
+    .style-underline {
+        flex-direction: column; // Kierunek flexbox na kolumnę
+        gap: 0 !important; // Brak odstępu
+
+        .smallUnderline {
+            width: 24px !important; // Szerokość na 24px
+        }
+    }
+}
+
+// Stylowanie dla div
+div {
+    @include dFlex($g: 40px); // Użycie mixina dFlex z gap 40px
+    font-size: 23px; // Rozmiar czcionki
+
+    a {
+        color: whitesmoke; // Kolor tekstu
+        text-decoration: none; // Brak podkreślenia tekstu
+        padding-bottom: 4px; // Padding dolny 4px
+
+        &:hover {
+            cursor: pointer; // Kursor jako pointer przy hover
+            color: $blue; // Kolor tekstu na niebieski przy hover
+            transition: 125ms; // Czas trwania przejścia
+        }
+    }
+}
+
+// Klasa dla małego podkreślenia
+.smallUnderline {
+    height: 3px; // Wysokość 3px
+    background-color: $violet; // Kolor tła
+    width: 56px; // Szerokość 56px
+    border-radius: 4px; // Zaokrąglone rogi
+    margin-top: -3px; // Margines górny -3px
+}
+
+// Klasa dla wyświetlania na desktopie
+.desktop-display {
+    height: 40px; // Wysokość 40px
+}
+
+// Klasa dla wyświetlania na urządzeniach mobilnych
+.mobile-display {
+
+    a {
+        display: none; // Elementy a są ukryte
+        width: 30px !important; // Szerokość 30px
+        cursor: pointer; // Kursor jako pointer
+    }
+}
