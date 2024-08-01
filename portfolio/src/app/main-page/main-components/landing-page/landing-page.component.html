@@ -1,24 +1,26 @@
 <p>landing-page works!</p>
-<p>Strona startowa działa!</p>
-<div class="center-max-width">
-    <div class="about me">
 
-        <!-- Sekcja z obrazem -->
-        <img class="img-section" src="#" alt="">
+<div class="center-max-width">
+    <div class="me">
+
+        <img class="img-section" src="./assets/img/landing-page/avatar.png" alt="">
+
 
         <div class="right-section">
             <div>
-                <!-- Sekcja tytułu -->
+                <h3 [ngClass]="{}">{{ "I am"  }}</h3>
+
                 <div class="title">
-                    <h1>Małgorzata TEST</h1>
+                    <h1>Max Mustermann</h1>
+                    <h2>{{ "FRONTEND DEVELOPER"  }}</h2>
                 </div>
             </div>
+            <a href="#contact"><button>{{ "Let's talk!"  }}</button></a>
         </div>
-
+        <div class="shadow-section">
+            <img class="hero display" src="./assets/img/landing-page/hero_background.png">
+           
+        </div>
     </div>
-    <!-- Sekcja z cieniami -->
-    <div class="shadow-section">
-        <img class="display" src=".#" alt="display obraz">
-        <img class="mobile" src=".#" alt="mobile obraz">
-    </div>
+    
 </div>
