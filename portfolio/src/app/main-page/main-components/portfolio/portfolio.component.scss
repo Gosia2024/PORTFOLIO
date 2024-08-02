@@ -1,0 +1,136 @@
+@import './../../../../styles.scss';
+
+.main-content {
+    padding: 200px 0 0 0;
+    position: relative;
+}
+
+.shade {
+    position: absolute;
+    z-index: -99;
+}
+
+.right {
+    left: 0;
+    bottom: 0;
+   margin-top: -300px;
+  
+}
+
+.headline-content {
+    @include dFlex;
+    flex-direction: column;
+    animation: comesFromRight 2s ease 75ms;
+
+
+    span {
+        padding: 0 40px;
+        text-align: center
+    }
+}
+
+.headline {
+    @include dFlex($g: 80px);
+    width: 100vw;
+
+    h2 {
+        font-size: 90px;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.left-section {
+    @include dFlex;
+    flex: 1;
+
+    .empty {
+        width: 80%;
+    }
+
+    .short-line {
+        height: 4px;
+        background-color: $violet;
+        width: 20%;
+    }
+}
+
+.right-section {
+    @include dFlex;
+    flex: 1;
+
+    .long-line {
+        height: 4px;
+        background-color: $violet;
+        width: 100%;
+    }
+}
+
+
+span {
+    font-size: 16px;
+
+}
+
+.content {
+    @include dFlex($g: 35px);
+    padding: 37px 100px;
+}
+
+.right-content {
+    @include dFlex($ai: start, $g: 35px);
+    flex-direction: column;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+        color: $violet;
+    }
+
+    h3 {
+        font-size: 23px;
+        font-weight: 400;
+        margin: 0;
+        color: $blue;
+    }
+
+    .text-section {
+        @include dFlex($ai: start, $g: 15px);
+        flex-direction: column;
+    }
+
+    .btns {
+        @include dFlex($g: 88px);
+        text-wrap: nowrap;
+
+        a {
+            @include dFlex;
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: 400;
+            color: whitesmoke;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 0;
+            box-shadow: 4px 4px 4px 0px #00000040;
+            transition: 125ms ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+
+.live {
+    background-color: $violet;
+}
+
+.git {
+    background-color: transparent;
+    border: 1px solid $blue !important;
+}
+

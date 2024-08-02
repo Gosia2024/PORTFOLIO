@@ -141,3 +141,14 @@ button {
     left: 0;
     z-index: -99;
 }
+.styled-heading {
+    font-family: Arial, sans-serif; /* Or use the exact font if known */
+    font-size: 2em; /* Adjust size to match the image */
+    font-weight: bold; /* Adjust weight to match the image */
+    color: #FFFFFF; /* White color for the main text */
+    margin: 0; /* Add this to match spacing */
+}
+
+.highlighted-text {
+    color: #9B51E0; /* Purple color for the highlighted text */
+}

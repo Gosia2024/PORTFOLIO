@@ -101,7 +101,7 @@ button {
 }
 
 // Sekcja cieni z absolutnym pozycjonowaniem i szerokością 100vw
-.shadow-section {
+.hero-section {
     position: absolute;
     top: 440px;
     left: 0;
@@ -121,4 +121,27 @@ button {
 // Klasa dla mobilnych widoków, początkowo ukryta
 .mobile {
     display: none;
+}
+.link-section {
+    @include dFlex($g: 42px);
+
+    .just-links {
+        @include dFlex($g: 42px);
+    }
+
+    a {
+        @include dFlex;
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 23px;
+    }
+
+    img {
+        transition: transform 125ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+    }
 }

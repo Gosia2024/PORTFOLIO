@@ -4,7 +4,7 @@
 // Stylowanie nagłówka (header)
 header {
     @include dFlex; // Użycie mixina dFlex dla flexbox
-    background-color: #141d2f; // Ustawienie koloru tła
+    background-color: #091222; // Ustawienie koloru tła
     max-height: 32px; // Maksymalna wysokość
     height: 100%; // Wysokość na 100%
     padding: 40px 80px; // Padding: góra/dół 40px, lewo/prawo 80px
@@ -13,12 +13,13 @@ header {
     position: fixed; // Pozycjonowanie fixed
     left: 0; // Przesunięcie do lewej krawędzi
     z-index: 99; // Z-index dla nakładania się elementów
+    top: 0; // Przesunięcie do górnej krawędzi
 }
 
 // Stylowanie nawigacji (nav)
 nav {
     @include dFlex($jc: space-between); // Użycie mixina dFlex z justyfikacją contentu na space-between
-    background-color: #141d2f; // Kolor tła
+    background-color: #091222; // Kolor tła
     width: 100%; // Szerokość na 100%
     max-width: 1920px; // Maksymalna szerokość
 
@@ -94,4 +95,8 @@ div {
         width: 30px !important; // Szerokość 30px
         cursor: pointer; // Kursor jako pointer
     }
+}
+.logo{
+  margin-top: 20px;
+
 }

@@ -1,0 +1,96 @@
+@import '../../../../../styles.scss';
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.text-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.form-section {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-section h2 {
+  margin-top: 0;
+}
+
+.text-section p {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #a445ed;
+  box-sizing: border-box;
+}
+
+.form-group input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 10px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(164, 69, 237, 0.7);
+}
+
+.submit-button {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: #acacc5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: $violet;
+}
+
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.privacy-policy a {
+  color: #64c8ff;
+  text-decoration: none;
+}
+
+.privacy-policy a:hover {
+  text-decoration: underline;
+}
