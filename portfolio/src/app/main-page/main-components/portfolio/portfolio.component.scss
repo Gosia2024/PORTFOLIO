@@ -1,5 +1,5 @@
 @import './../../../../styles.scss';
-
+/*
 .main-content {
     padding: 200px 0 0 0;
     position: relative;
@@ -134,3 +134,146 @@ span {
     border: 1px solid $blue !important;
 }
 
+*/
+
+.main-content {
+    padding: 200px 0 0 0;
+    position: relative;
+}
+
+.shade {
+    position: absolute;
+    z-index: -99;
+}
+
+.right {
+    left: 0;
+    bottom: 0;
+    margin-top: -300px;
+}
+
+.headline-content {
+    display: flex;
+    flex-direction: column;
+    animation: comesFromRight 2s ease 75ms;
+
+    span {
+        padding: 0 40px;
+        text-align: center;
+    }
+}
+
+.headline {
+    display: flex;
+    gap: 80px;
+    width: 100vw;
+
+    h2 {
+        font-size: 90px;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.left-section {
+    display: flex;
+    flex: 1;
+
+    .empty {
+        width: 80%;
+    }
+
+    .short-line {
+        height: 4px;
+        background-color: $violet;
+        width: 20%;
+    }
+}
+
+.right-section {
+    display: flex;
+    flex: 1;
+
+    .long-line {
+        height: 4px;
+        background-color: $violet;
+        width: 100%;
+    }
+}
+
+span {
+    font-size: 16px;
+}
+
+.content {
+    display: flex;
+    gap: 35px;
+    padding: 37px 100px;
+    flex-direction: row;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    flex-direction: column;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+        color: $violet;
+    }
+
+    h3 {
+        font-size: 23px;
+        font-weight: 400;
+        margin: 0;
+        color: $blue;
+    }
+
+    .text-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .btns {
+        display: flex;
+        gap: 88px;
+        text-wrap: nowrap;
+
+        a {
+            display: flex;
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: 400;
+            color: whitesmoke;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 0;
+            box-shadow: 4px 4px 4px 0px #00000040;
+            transition: 125ms ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+.live {
+    background-color: $violet;
+}
+
+.git {
+    background-color: transparent;
+    border: 1px solid $blue !important;
+}

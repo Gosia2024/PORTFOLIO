@@ -1,5 +1,5 @@
 <p>portfolio works!</p>
-<div class="main-content">
+<!---<div class="main-content">
     <div class="headline-content" data-aos="fade-left">
         <div class="headline">
             <div class="left-section">
@@ -33,8 +33,91 @@
         <img class="shade right" src="./assets/img/portfolio/shadow.png">
 
 </div>
+           --->
+<!------
+           <p>portfolio works!</p>
+           <div class="main-content">
+               <div class="headline-content" data-aos="fade-left">
+                   <div class="headline">
+                       <div class="left-section">
+                           <div class="empty"></div>
+                           <div class="short-line"></div>
+                       </div>
+                       <h2>Portfolio</h2>
+                       <div class="right-section">
+                           <div class="long-line"></div>
+                       </div>
+                   </div>
+                   <span>{{ "Explore a selection of my work here -Interact with projects to see my skills in action" }}</span>
+               </div>
+           
+               <img class="shade" [ngStyle]="{ 'left': '0' }" src="./assets/img/portfolio/shadow.png">
+           
+               <div [ngStyle]="{ 'padding-top': '160px' }">
+                   <div class="content" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                   *ngFor="let project of projects; let i = index" [ngStyle]="{
+                       'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'
+                     }">
+                       <div>
+                           <img [src]="'./assets/img/portfolio/Join.png'" [alt]="project['name'] + ' image 1'">
+                       </div>
+                       <div class="right-content">
+                           <h2>{{ project.name}}</h2>
+                           <h3>{{ project.description }}</h3>
+                           <div class="btns">
+                               <a href="{{ project.link }}" target="_blank" class="live">Live test</a>
+                               <a href="{{ project.git }}" target="_blank" class="git">Github</a>
+                           </div>
+                           <div class="project-container">
+                               <img [src]="'./assets/img/portfolio/pollo_loco.png'" [alt]="project['name'] + ' image 2'">
+                           </div>
+                       </div>
+                       <img class="shade right" src="./assets/img/portfolio/shadow.png">
+                   </div>
+               </div>
+           </div>
            
 
     
+---------->
+<p>portfolio works!</p>
+<div class="main-content">
+    <div class="headline-content" data-aos="fade-left">
+        <div class="headline">
+            <div class="left-section">
+                <div class="empty"></div>
+                <div class="short-line"></div>
+            </div>
+            <h2>Portfolio</h2>
+            <div class="right-section">
+                <div class="long-line"></div>
+            </div>
+        </div>
+        <span>{{ "Explore a selection of my work here -Interact with projects to see my skills in action" }}</span>
+    </div>
 
-    
+    <img class="shade" [ngStyle]="{ 'left': '0' }" src="./assets/img/portfolio/shadow.png">
+
+    <div [ngStyle]="{ 'padding-top': '160px' }">
+        <div class="content" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-in-out"
+            *ngFor="let project of projects; let i = index">
+            <div>
+                <img [src]="'./assets/img/portfolio/' + project.img1" [alt]="project.name + ' image 1'">
+            </div>
+            <div class="right-content">
+                <h2>{{ project.name }}</h2>
+                <h3>{{ project.description }}</h3>
+                <div class="btns">
+                    <a href="{{ project.link }}" target="_blank" class="live">Live test</a>
+                    <a href="{{ project.git }}" target="_blank" class="git">Github</a>
+                </div>
+                <div class="project-container">
+                    <img [src]="'./assets/img/portfolio/' + project.img2" [alt]="project.name + ' image 2'">
+                    <h2>{{ project.img2Name }}</h2>
+                    <h3>{{ project.img2Description }}</h3> <!-- Dodanie opisu dla img2 -->
+                </div>
+            </div>
+            <img class="shade right" src="./assets/img/portfolio/shadow.png">
+        </div>
+    </div>
+</div>
