@@ -1,1 +1,41 @@
 <p>menu works!</p>
+<!-------------<header>
+    <div class="bg">
+        <nav>
+            <a href="#"><img src="./assets/img/logo.png" alt="Logo"></a>
+            <div class="style-close-btn">
+                <img  src="./../../assets/img/icons/close.png">
+            </div>
+        </nav>
+        <div id="mobile-burger">
+            <a href="#bout-me"  class="hover">{{ "aboutMe.me" }}</a>
+            <a href="#skills"  class="hover">Skills</a>
+            <a href="#portfolio"  class="hover">Portfolio</a>
+            <a href="#contact"  class="hover">Contact</a>
+           
+        </div>
+    </div>
+</header>-------------->
+<header>
+    <div class="bg"><!-------uWAGA TU DOAC bg-->
+        <nav>
+            <a href="#"><img src="../../assets/img/menu/logo.png" alt="Logo"></a>
+            <div class="style-close-btn">
+                <img (click)="closeMenu()" src="../../assets/img/menu/close_menu.png">
+            </div>
+        </nav>
+        <div id="mobile-burger">
+            <a href="#bout-me" (click)="closeMenu()" class="hover">About me</a>
+            <a href="#skills" (click)="closeMenu()" class="hover">My skills</a>
+            <a href="#portfolio" (click)="closeMenu()" class="hover">Portfolio</a>
+            <a href="#contact" (click)="closeMenu()" class="hover">Contact</a>
+            
+        </div>
+
+        <div>
+            <a (click)="('en')" [ngClass]="{}">EN</a>
+            <p>|</p>
+            <a (click)="('de')" [ngClass]="{}">DE</a>
+        </div>
+    </div>
+</header>

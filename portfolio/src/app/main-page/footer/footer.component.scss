@@ -1,71 +1,172 @@
-@import './../../../styles.scss'; /* Import głównego pliku stylów */
+@import './../../../styles.scss';
 
-/* Style dla stopki */
 footer {
-    @include dFlex; /* Użycie mixina dFlex z domyślnymi wartościami */
-    width: 100vw; /* Szerokość na 100% widocznej szerokości ekranu */
-    border-top: 4px solid $blue; /* Górna ramka w kolorze niebieskim */
+    @include dFlex;
+    width: 100vw;
+    border-top: 4px solid $blue;
 
     .footer {
-        @include dFlex($jc: space-between); /* Użycie mixina dFlex z justify-content: space-between */
-        padding: 54px 100px; /* Wewnętrzne odstępy */
-        width: 100%; /* Szerokość 100% */
-      
+        @include dFlex($jc: space-between);
+        padding: 54px 100px;
+        width: 100%;
+        max-width: 1920px;
 
         .copyright {
-            font-size: 23px; /* Rozmiar czcionki 23px */
+            font-size: 23px;
         }
     }
 
-    .mobile-impressum {
-        display: none; /* Ukrycie elementu */
+    .mobile-imprint {
+        display: none;
     }
 }
 
-/* Style dla sekcji logo i impressum */
+
+
 .logo-impressum {
-    @include dFlex($ai: start); /* Użycie mixina dFlex z align-items: start */
-    flex-direction: column; /* Ustawienie kierunku flex na kolumnę */
+    @include dFlex($ai: start);
+    flex-direction: column;
 
     a:first-child {
-        @include dFlex; /* Użycie mixina dFlex z domyślnymi wartościami */
+        @include dFlex;
 
         img {
-            width: 150px; /* Szerokość obrazu 216px */
+            width: 216px;
         }
     }
 
     a:last-child {
-        padding: 5px 10px; /* Wewnętrzne odstępy */
-        font-size: 16px; /* Rozmiar czcionki 16px */
-        color: whitesmoke; /* Kolor tekstu prawie biały */
-        text-decoration: none; /* Brak podkreślenia tekstu */
-        margin-left: 60px; /* Margines z lewej 60px */
-      
+        padding: 5px 10px;
+        font-size: 16px;
+        color: whitesmoke;
+        text-decoration: none;
+
         &:hover {
-            cursor: pointer; /* Zmiana kursora na wskaźnik */
-            text-decoration: underline; /* Podkreślenie tekstu */
+            cursor: pointer;
+            text-decoration: underline;
         }
     }
 }
 
-/* Style dla sekcji linków */
 .link-section {
-    @include dFlex($g: 42px); /* Użycie mixina dFlex z gap: 42px */
+    @include dFlex($g: 42px);
 
     a {
-        @include dFlex; /* Użycie mixina dFlex z domyślnymi wartościami */
-        text-decoration: none; /* Brak podkreślenia tekstu */
-        color: whitesmoke; /* Kolor tekstu prawie biały */
-        font-size: 23px; /* Rozmiar czcionki 23px */
+        @include dFlex;
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 23px;
     }
 
     img {
-        transition: transform 125ms ease-in-out; /* Animacja transformacji */
+        transition: transform 125ms ease-in-out;
 
         &:hover {
-            cursor: pointer; /* Zmiana kursora na wskaźnik */
-            transform: scale(1.5); /* Powiększenie obrazu o 1.5 razy */
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    footer {
+        .footer {
+            flex-direction: column;
+            gap: 56px;
+        }
+
+
+        .desktop-imprint {
+            display: none;
+        }
+
+        .mobile-imprint {
+            display: block;
+            font-size: 16px;
+            color: whitesmoke;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        .footer {
+            padding: 54px 80px;
+        }
+    }
+
+    .logo-imprint {
+        a:first-child {
+            img {
+                width: 190px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+
+    .copyright {
+        font-size: 20px !important;
+    }
+
+    .logo-imprint {
+        a:first-child {
+            img {
+                width: 160px;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 380px) {
+    footer {
+        .footer {
+            padding: 48px 64px;
+        }
+    }
+
+    .copyright {
+        font-size: 18px !important;
+    }
+
+    .logo-imprint {
+        a:first-child {
+            img {
+                width: 140px;
+            }
+        }
+    }
+
+    .link-section {
+
+        img {
+            width: 24px;
+        }
+    }
+}
+
+@media (max-width: 325px) {
+
+    .copyright {
+        font-size: 16px !important;
+    }
+
+    .logo-imprint {
+        a:first-child {
+            img {
+                width: 80px;
+            }
         }
     }
 }

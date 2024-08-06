@@ -6,11 +6,12 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { MenuComponent } from '../menu/menu.component';
 import { PrivacyComponent } from '../privacy/privacy.component';
 import { ContactComponent } from './contact/contact.component';
+import { LinksComponent } from "./links/links.component";
 
 @Component({
   selector: 'app-main-components',
   standalone: true,
-  imports: [LandingPageComponent,PortfolioComponent,SkillsComponent,AboutMeComponent, MenuComponent,PrivacyComponent, ContactComponent   ],
+  imports: [LandingPageComponent, PortfolioComponent, SkillsComponent, AboutMeComponent, MenuComponent, PrivacyComponent, ContactComponent, LinksComponent],
   templateUrl: './main-components.component.html',
   styleUrl: './main-components.component.scss'
 })

@@ -1,99 +1,97 @@
-// Importowanie stylów
-@import './../../../styles.scss';
 
-// Stylowanie nagłówka (header)
+@import './../../../styles.scss';
+/*
+
 header {
-    @include dFlex; // Użycie mixina dFlex dla flexbox
-    background-color: #091222; // Ustawienie koloru tła
-    max-height: 32px; // Maksymalna wysokość
-    height: 100%; // Wysokość na 100%
-    padding: 40px 80px; // Padding: góra/dół 40px, lewo/prawo 80px
-    width: 100vw; // Szerokość na 100% widocznego obszaru
-    max-width: calc(100vw - 160px); // Maksymalna szerokość z uwzględnieniem paddingu
-    position: fixed; // Pozycjonowanie fixed
-    left: 0; // Przesunięcie do lewej krawędzi
-    z-index: 99; // Z-index dla nakładania się elementów
-    top: 0; // Przesunięcie do górnej krawędzi
+    @include dFlex; 
+    background-color: #091222; 
+    max-height: 32px; 
+    padding: 40px 80px; 
+    width: 100vw; 
+    max-width: calc(100vw - 160px); 
+    position: fixed; 
+    left: 0; 
+    z-index: 99; 
+    top: 0; 
 }
 
-// Stylowanie nawigacji (nav)
-nav {
-    @include dFlex($jc: space-between); // Użycie mixina dFlex z justyfikacją contentu na space-between
-    background-color: #091222; // Kolor tła
-    width: 100%; // Szerokość na 100%
-    max-width: 1920px; // Maksymalna szerokość
 
+nav {
+    @include dFlex($jc: space-between); 
+    background-color: #091222; 
+    width: 100%; 
+    max-width: 1920px; 
+}
     a {
-        @include dFlex; // Użycie mixina dFlex dla flexbox
+        @include dFlex; 
 
         img {
-            width: 150px; // Szerokość obrazka
+            width: 150px; 
 
             &:hover {
-                cursor: pointer; // Kursor jako pointer przy hover
-            }
+                cursor: pointer; 
         }
     }
 }
 
-// Klasa .orange zmienia kolor tekstu na niebieski (zdefiniowany jako $blue)
+
 .orange {
     color: $blue !important;
 }
 
-// Stylowanie przycisku języka
+
 .language-btn {
-    @include dFlex($g: 4px); // Użycie mixina dFlex z gap 4px
+    @include dFlex($g: 4px); 
 
     .style-underline {
-        flex-direction: column; // Kierunek flexbox na kolumnę
-        gap: 0 !important; // Brak odstępu
+        flex-direction: column; 
+        gap: 0 !important; 
 
         .smallUnderline {
-            width: 24px !important; // Szerokość na 24px
+            width: 24px !important; 
         }
     }
 }
 
-// Stylowanie dla div
+
 div {
-    @include dFlex($g: 40px); // Użycie mixina dFlex z gap 40px
-    font-size: 23px; // Rozmiar czcionki
+    @include dFlex($g: 40px); 
+    font-size: 23px; 
 
     a {
-        color: whitesmoke; // Kolor tekstu
-        text-decoration: none; // Brak podkreślenia tekstu
-        padding-bottom: 4px; // Padding dolny 4px
+        color: whitesmoke; 
+        text-decoration: none; 
+        padding-bottom: 4px; 
 
         &:hover {
-            cursor: pointer; // Kursor jako pointer przy hover
-            color: $blue; // Kolor tekstu na niebieski przy hover
-            transition: 125ms; // Czas trwania przejścia
+            cursor: pointer; 
+            color: $blue; 
+            transition: 125ms; 
         }
     }
 }
 
-// Klasa dla małego podkreślenia
+
 .smallUnderline {
-    height: 3px; // Wysokość 3px
-    background-color: $violet; // Kolor tła
-    width: 56px; // Szerokość 56px
-    border-radius: 4px; // Zaokrąglone rogi
-    margin-top: -3px; // Margines górny -3px
+    height: 3px; 
+    background-color: $violet; 
+    width: 56px; 
+    border-radius: 4px; 
+    margin-top: -3px; 
 }
 
-// Klasa dla wyświetlania na desktopie
+
 .desktop-display {
-    height: 40px; // Wysokość 40px
+    height: 40px; 
 }
 
-// Klasa dla wyświetlania na urządzeniach mobilnych
+
 .mobile-display {
 
     a {
-        display: none; // Elementy a są ukryte
-        width: 30px !important; // Szerokość 30px
-        cursor: pointer; // Kursor jako pointer
+        display: none; 
+        width: 30px !important; 
+        cursor: pointer; 
     }
 }
 .logoja{
@@ -102,3 +100,145 @@ div {
   height: 90px;
 
 }
+  */
+
+  header {
+    @include dFlex;
+    background-color: #141d2f;
+    max-height: 32px;
+    height: 100%;
+    padding: 40px 80px;
+    width: 100vw;
+    max-width: calc(100vw - 160px);
+    position: fixed;
+    left: 0;
+    z-index: 99;
+}
+
+nav {
+    @include dFlex($jc: space-between);
+    background-color: #141d2f;
+    width: 100%;
+    max-width: 1920px;
+
+    a {
+        @include dFlex;
+
+        img {
+            width: 150px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.blue {
+    color: $blue !important;
+}
+
+.language-btn {
+    @include dFlex($g: 4px);
+
+    .style-underline {
+        flex-direction: column;
+        gap: 0 !important;
+
+        .smallUnderline {
+            width: 24px !important;
+        }
+    }
+
+}
+
+
+div {
+    @include dFlex($g: 40px);
+    font-size: 23px;
+
+    a {
+        color: whitesmoke;
+        text-decoration: none;
+        padding-bottom: 4px;
+
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+            transition: 125ms;
+        }
+    }
+}
+
+.smallUnderline {
+    height: 3px;
+    background-color: $violet;
+    width: 56px;
+    border-radius: 4px;
+    margin-top: -3px;
+}
+
+.desktop-display {
+    height: 40px;
+}
+
+.mobile-display {
+
+    a {
+        display: none;
+        width: 30px !important;
+        cursor: pointer;
+    }
+}
+@media (max-width: 850px) {
+
+    .desktop-display {
+        display: none !important;
+    }
+
+    .mobile-display {
+
+        a {
+            display: flex !important;
+
+        }
+
+    }
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 32px 72px;
+        max-width: calc(100vw - 142px);
+    }
+
+    nav {
+        a {
+            img {
+                width: 80px !important;
+            }
+        }
+    }
+
+    .mobile-display {
+
+        a {
+            width: 21px !important;
+
+            img {
+                width: 20px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 32px 40px;
+        max-width: calc(100vw - 80px);
+    }
+}
+
+

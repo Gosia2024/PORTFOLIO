@@ -1,0 +1,21 @@
+{
+    "landingpage": {
+        "iam": "Jestem",
+        "title": "DEWELOPER FRONTEND",
+        "btnTalk": "Porozmawiajmy!"
+    },
+    "links": {
+        "links": "Przewiń w dół"
+    },
+    "aboutMe": {
+        "me": "O mnie",
+        "hi": "Cześć, jestem niemieckojęzycznym deweloperem frontend z siedzibą w Lipsku. Zmotywowany nieograniczonymi możliwościami w IT, jestem podekscytowany tworzeniem wizualnie atrakcyjnych i intuicyjnych stron internetowych i aplikacji.",
+        "bulb": "Elastyczny pod względem środowisk pracy, mogę efektywnie pracować zarówno na miejscu w Lipsku, jak i zdalnie.",
+        "puzzle": "Jestem otwarty i zawsze szukam osobistych wyzwań, aby stale poprawiać swoją wiedzę i umiejętności."
+    },
+    "skills": {
+        "skills": "Moje umiejętności",
+        "title": "Zebrałem doświadczenie w budowaniu projektów z wykorzystaniem różnych technologii frontend i koncepcji.",
+        "btnSkills": "Skontaktuj się"
+    }
+}

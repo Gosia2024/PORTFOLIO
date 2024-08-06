@@ -1,7 +1,7 @@
-<header>
+<!---------<header>
    <nav>
-        <div class="logo">
-            <a href="#"> <img class="logoja" src="./assets/img/header/logo.png" alt="Logo"></a>
+        <div  class="logo">
+            <a href="#"> <img  data-aos="flip-left" data-asos-easing="ease-out-cubic" data-aos-duration="2000" class="logoja" src="./assets/img/header/logo.png" alt="Logo"></a>
         </div>
         <div class="mobile-display">
             <a href="#"><img src="#" alt="Menu"></a>
@@ -29,6 +29,62 @@
                     <a href="#">PL</a>
                 </div>
             </section>
+        </div>
+    </nav>
+</header>
+--->
+
+<header>
+    <nav>
+        <a href="#"><img  data-aos="flip-left" data-asos-easing="ease-out-cubic" data-aos-duration="2000"   src="./assets/img/header/logo.png" alt="Logo"></a>
+        <div class="mobile-display">
+            <a (click)="handleClick($event)"><img src="./assets/img/header/menu.png" alt="Menu"></a>
+        </div>
+        <div class="desktop-display">
+    
+            <section >
+                <a href="#about-me" (click)="setAboutMeOpen()" [ngClass]="{'blue': aboutMeOpen}">{{ "About me"  }}</a>
+                <div *ngIf="aboutMeOpen" [ngClass]="{'smallUnderline':aboutMeOpen}"></div>
+            </section>
+    
+            <section  >
+                <a href="#skills" (click)="setSkillsOpen()" [ngClass]="{'blue': skillsOpen}">Skills</a>
+                <div *ngIf="skillsOpen" [ngClass]="{'smallUnderline':skillsOpen}"></div>
+            </section>
+    
+            <section >
+                <a href="#portfolio" (click)="setPortfolioOpen()" [ngClass]="{'blue': portfolioOpen}">Portfolio</a>
+                <div *ngIf="portfolioOpen" [ngClass]="{'smallUnderline':portfolioOpen}"></div>
+            </section>
+    
+            
+          
+                <section class="language-btn">
+                    <!-- Blok dla języka angielskiego -->
+                    <div class="style-underline">
+                        <!-- Kliknięcie zmienia język na angielski, a klasa CSS 'orange' jest dodawana, gdy język angielski jest aktywny -->
+                        <a (click)="changeLanguage('en')" [ngClass]="{'blue': translateService}">EN</a>
+                        <!-- Podkreślenie pojawia się, gdy język angielski jest aktywny -->
+                        <div *ngIf="translateService" class="smallUnderline"></div>
+                    </div>
+                    <p>|</p>
+                    <!-- Blok dla języka niemieckiego -->
+                    <div class="style-underline">
+                        <!-- Kliknięcie zmienia język na niemiecki, a klasa CSS 'orange' jest dodawana, gdy język niemiecki jest aktywny -->
+                        <a (click)="changeLanguage('de')" [ngClass]="{'blue': translateService}">DE</a>
+                        <!-- Podkreślenie pojawia się, gdy język niemiecki jest aktywny -->
+                        <div *ngIf="translateService" class="smallUnderline"></div>
+                    </div>
+                    <p>|</p>
+                    <!-- Blok dla języka polskiego -->
+                    <div class="style-underline">
+                        <!-- Kliknięcie zmienia język na polski, a klasa CSS 'orange' jest dodawana, gdy język polski jest aktywny -->
+                        <a (click)="changeLanguage('pl')" [ngClass]="{'blue': translateService}">PL</a>
+                        <!-- Podkreślenie pojawia się, gdy język polski jest aktywny -->
+                        <div *ngIf="translateService" class="smallUnderline"></div>
+                    </div>
+                </section>
+                
         </div>
     </nav>
 </header>

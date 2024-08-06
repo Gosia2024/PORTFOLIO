@@ -1,0 +1,23 @@
+{
+    "landingpage": {
+        "iam": "I am",
+        "title": "FRONTEND DEVELOPER",
+        "btnTalk": "Let's talk!"
+    },
+    "links": {
+        "links": "Scroll down"
+    },
+    "aboutMe": {
+        "me": "About me",
+        "hi": "Hi, Im a german speaking Frontend Developer based Leipzig.Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications",
+        "bulb": "Felxible in terms of working environments, i can work effectively both on-site in Leipzigand remotely..",
+        "puzzle": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills"
+    },
+    "skills": {
+        "skills": "My skills",
+        "title": "I have gainded experience in building projects with different frontend technologies and concepts.",
+        "btnSkills": "Get in touch"
+    }
+    
+  
+    }

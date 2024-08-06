@@ -152,3 +152,173 @@ button {
 .highlighted-text {
     color: #9B51E0; /* Purple color for the highlighted text */
 }
+
+
+@media (max-width: 1200px) {
+    .main-section {
+        padding: 0;
+        flex-direction: column-reverse;
+        @include dFlex($jc: space-around, $g: 160px);
+
+
+        .desktop-btn {
+            display: none;
+        }
+
+        .mobile-btn {
+            display: block;
+            z-index: 8;
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .right-section {
+        padding-left: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .right-section {
+        padding-left: 30%;
+    }
+
+    .left-section {
+        column-gap: 90px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-section {
+        gap: 132px;
+    }
+
+    .right-section {
+        padding-left: 20%;
+    }
+
+    .left-section {
+        justify-content: center;
+
+        span {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .right-section {
+        padding-left: 10%;
+
+        span {
+            width: 400px;
+            padding-right: 0;
+        }
+    }
+
+    .shade {
+        width: 320px;
+    }
+}
+
+@media (max-width: 550px) {
+    .main-section {
+        @include dFlex($jc: space-evenly, $g: 96px);
+
+    }
+
+    .right-section {
+        padding-left: 0;
+
+        h2 {
+            font-size: 80px;
+        }
+
+        span {
+            width: 350px;
+        }
+    }
+
+    .left-section {
+        column-gap: 60px;
+
+        img {
+            width: 48px;
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+    .right-section {
+        h2 {
+            font-size: 64px;
+        }
+
+        span {
+            width: 280px !important;
+        }
+    }
+
+    button {
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .left-section {
+        column-gap: 32px;
+
+        img {
+            width: 40px;
+        }
+    }
+
+    .shade {
+        width: 240px;
+    }
+}
+
+@media (max-width: 400px) {
+    .left-section {
+        gap: 40px 24px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    h2 {
+        font-size: 48px !important;
+    }
+
+    .left-section {
+        column-gap: 16px;
+
+        div {
+            width: 90px;
+        }
+
+        img {
+            width: 32px;
+        }
+
+        span {
+            font-size: 12px;
+        }
+    }
+
+    .shade {
+        width: 180px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    h2 {
+        font-size: 40px !important;
+    }
+
+    .left-section {
+        gap: 32px 0;
+    }
+}

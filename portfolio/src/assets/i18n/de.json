@@ -1,0 +1,22 @@
+{
+    "landingpage": {
+        "iam": "Ich bin",
+        "title": "FRONTEND-ENTWICKLER",
+        "btnTalk": "Lass uns reden!"
+    },
+    "links": {
+        "links": "Runterscrollen"
+    },
+    "aboutMe": {
+        "me": "Über mich",
+        "hi": "Hi, ich bin ein deutschsprachiger Frontend-Entwickler aus Leipzig. Motiviert von den unbegrenzten Möglichkeiten in der IT, bin ich begeistert davon, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.",
+        "bulb": "Flexibel in Bezug auf Arbeitsumgebungen, kann ich sowohl vor Ort in Leipzig als auch remote effektiv arbeiten.",
+        "puzzle": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern."
+    },
+    "skills": {
+        "skills": "Meine Fähigkeiten",
+        "title": "Ich habe Erfahrung in der Erstellung von Projekten mit verschiedenen Frontend-Technologien und -Konzepten gesammelt.",
+        "btnSkills": "Kontakt aufnehmen"
+    }
+}
+

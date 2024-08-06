@@ -88,3 +88,81 @@ h2 {
 }
 
 
+
+@media (max-width: 1300px) {
+    .main-section {
+        padding-left: 140px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .right-section, .orange-line {
+        display: none;
+    }
+
+    .main-section {
+        padding: 160px 0 160px 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .left-section {
+        h2 {
+            font-size: 80px;
+        }
+
+        .text-section {
+            width: 350px;
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .personal-section {
+        img {
+            width: 40px !important;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+
+    h2 {
+        font-size: 64px !important;
+    }
+
+    .shade {
+        width: 240px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    h2 {
+        font-size: 48px !important;
+    }
+
+    .text-section {
+        width: 280px !important;
+
+    }
+
+    .shade {
+        width: 180px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    h2 {
+        font-size: 40px !important;
+    }
+
+    .text-section {
+        width: 250px !important;
+
+    }
+}

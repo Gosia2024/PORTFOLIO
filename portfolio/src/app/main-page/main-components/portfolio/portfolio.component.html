@@ -104,14 +104,14 @@
             <div>
                 <img [src]="'./assets/img/portfolio/' + project.img1" [alt]="project.name + ' image 1'">
             </div>
-            <div class="right-content">
+            <div class="right-content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <h2>{{ project.name }}</h2>
                 <h3>{{ project.description }}</h3>
                 <div class="btns">
                     <a href="{{ project.link }}" target="_blank" class="live">Live test</a>
                     <a href="{{ project.git }}" target="_blank" class="git">Github</a>
                 </div>
-                <div class="project-container">
+                <div class="project-container"data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500" >
                     <img [src]="'./assets/img/portfolio/' + project.img2" [alt]="project.name + ' image 2'">
                     <h2>{{ project.img2Name }}</h2>
                     <h3>{{ project.img2Description }}</h3> <!-- Dodanie opisu dla img2 -->

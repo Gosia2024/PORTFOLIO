@@ -331,7 +331,26 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!------------
 <app-header></app-header>
 
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer></app-footer>------------>
+
+
+<div class="landscape-mobile">
+  <div class="flow-hidden">
+      <div [ngClass]="{'burger_open':menuOpen, 'burger_closed': !menuOpen}">
+          <app-menu (menuClosed)="menuOpen = $event"></app-menu>
+      </div>
+      <app-header (openMenuChange)="menuOpen = $event"></app-header>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+     
+  </div>
+</div>
+<div class="rotate">
+  <h2>Please rotate your phone<span>.</span></h2>
+</div>
